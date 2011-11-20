@@ -11,10 +11,7 @@ unsigned long lastUpdate;
 void setup()
 {
 Serial.begin(57600);
-softwareTone.init();
-for (int pin=2; pin<=13; pin++) {
-  softwareTone.enablePin(pin);
-}
+SoftwareTone.init();
 lastUpdate = millis();
 }
 
@@ -28,7 +25,7 @@ for (int i = 0; i < 12; i++) {
 }
 
 for (int i = 0; i < 12; i++) {
-  softwareTone.setFreq(i + 2, toneVals[i]);
+  SoftwareTone.setFreq(i + 2, toneVals[i]);
 }
 
 lastUpdate = millis();
@@ -56,7 +53,7 @@ if (Serial.available()) {
 
 if (millis() - lastUpdate > 1000) {
   for (int i = 0; i < 12; i++) {
-    softwareTone.setFreq(i + 2, 1);   
+    SoftwareTone.setFreq(i + 2, 0);   
   }
 }
 }
