@@ -1,0 +1,5 @@
+This repository contains the Arduino and Processing sketches used in the syneseizure project (syneseizure.wordpress.com) created as part of Science Hack Day San Francisco 2011. Syneseizure is project to use a physical device to create the effect of synesthesia experienced by some people, by translating vision into touch. The hardware is a mask with 12 speakers built into it in a 4x3 array controlled by an Arduino. The Arduino is connected to a computer running a Processing sketch that takes input from a webcam, simplifies it into a 4x3 pixel array and sends the data to the mask, which vibrates in response to the visual input.
+
+The Arduino code uses square wave generation in software to control frequencies on the 12 speakers at once on different Arduino pins. The code for this is available here: https://github.com/gregfriedland/SoftwareTone.
+
+--Greg
